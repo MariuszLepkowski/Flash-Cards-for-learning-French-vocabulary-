@@ -22,7 +22,7 @@ def new_card():
 window = Tk()
 window.title("Flash Cards")
 window.minsize(width=800, height=720)
-window.config(padx=50, bg=BACKGROUND_COLOR)
+window.config(padx=50, pady=50, bg=BACKGROUND_COLOR)
 
 
 # Canvas
@@ -45,14 +45,14 @@ front_canvas.grid(row=0, column=0, columnspan=2)
 
 # Buttons
 
-right_button_img = PhotoImage(file="images/right.png")
-wrong_button_img = PhotoImage(file="images/wrong.png")
+check_button_img = PhotoImage(file="images/right.png")
+cross_button_img = PhotoImage(file="images/wrong.png")
 
-right_button = Button(padx=50, image=right_button_img, highlightthickness=0, command=new_card)
-right_button.grid(row=1, column=1)
+check_button = Button(padx=50, image=check_button_img, highlightthickness=0, command=new_card)
+check_button.grid(row=1, column=1)
 
-wrong_button = Button(padx=50, image=wrong_button_img, highlightthickness=0, command=new_card)
-wrong_button.grid(row=1, column=0)
+cross_button = Button(padx=50, image=cross_button_img, highlightthickness=0, command=new_card)
+cross_button.grid(row=1, column=0)
 
 
 window.mainloop()
