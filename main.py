@@ -4,7 +4,7 @@ import pandas
 import random
 
 BACKGROUND_COLOR = "#B1DDC6"
-
+random_word_pair = ""
 # ---------------------------- CARD MANAGER ------------------------------- #
 
 
@@ -79,7 +79,7 @@ check_button.grid(row=1, column=1)
 cross_button = Button(padx=50, image=cross_button_img, highlightthickness=0, command=new_card)
 cross_button.grid(row=1, column=0)
 
-random_word_pair = ""
+
 flip_timer = window.after(3000, func=flip_card)
 new_card()
 
